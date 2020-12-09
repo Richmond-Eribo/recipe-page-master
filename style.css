@@ -51,12 +51,12 @@ font-family: 'Playfair Display', serif; */
   border-radius: 20px;
   overflow: hidden;
   margin-top: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 45px;
 }
 
 .image img {
   width: 100%;
-  height: 213.83px;
+  max-height: 315px;
 }
 
 .card {
@@ -71,6 +71,7 @@ font-family: 'Playfair Display', serif; */
 
 .card .one {
   grid-area: one;
+  /* background-color: green; */
 }
 .card .two {
   grid-area: two;
@@ -188,4 +189,101 @@ font-family: 'Playfair Display', serif; */
 
 footer {
   text-align: center;
+  margin-top: 15px;
+}
+
+@media only screen and (min-width: 720px) {
+  .header .header-subtitle {
+    width: 592px;
+  }
+  .header .header-subtitle p {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .image img {
+    width: 100%;
+    max-height: 400px;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      '. one  .'
+      '. two .'
+      '. three .'
+      '. four .';
+    grid-gap: 10px 0px;
+    width: 189px;
+    height: 300px;
+    border-radius: 12px;
+    /* box-shadow: -3px -8px 15px 2px #969696; */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+    grid-area: card;
+    justify-self: flex-end;
+  }
+
+  .one,
+  .two,
+  .three,
+  .four {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card p {
+    margin-top: 5px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    grid-gap: 10px;
+    grid-template-areas:
+      'ingredients card'
+      'instructions .';
+  }
+
+  .instructions {
+    grid-area: instructions;
+  }
+
+  .ingredients {
+    grid-area: ingredients;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  .container {
+    width: 850px;
+    margin: auto;
+  }
+
+  .header h2 {
+    font-size: 48px;
+    line-height: 64px;
+  }
+
+  .header .header-subtitle p {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .ingredients h3 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .ingredients h4 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .ingredient .recipe {
+    font-size: 16px;
+  }
 }
