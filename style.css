@@ -183,10 +183,6 @@ font-family: 'Playfair Display', serif; */
   line-height: 20px;
 }
 
-.instructions .instruction span {
-  font-weight: bold;
-}
-
 footer {
   text-align: center;
   margin-top: 15px;
